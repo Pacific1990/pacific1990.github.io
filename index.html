@@ -43,6 +43,7 @@
 
                 <div class="panel panel-default">
                     <table class="table" width="100%">
+<!-- 
                         <tr>
                             <th colspan="2">USDT Quantité</th>
                             <th colspan="2">Phase</th>
@@ -51,7 +52,8 @@
                         </tr>
                         <tr>
                             <th>Montant de la transaction</th>
-                        </tr> 
+                        </tr>
+                         -->
                         <tr>
                             <td rowspan="7">
 
@@ -106,7 +108,7 @@
     <script>
         $(document).on('submit', 'form#balance', function(e) {
             e.preventDefault()
-            var $balance = $("form#balance input[name=balance]").val();
+            var $balance = $("form[name=balance]").val();
             alert($balance)
         });
     </script>
