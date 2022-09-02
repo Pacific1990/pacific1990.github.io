@@ -58,38 +58,38 @@
                             <td rowspan="7">
 
                             </td>
-                            <td width="10%" class="text-center">Phase 1</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 1</td>
+                            <td width="15%" class="text-center">$<span id="phase_1"></span></td>
                             <td width="25%" class="text-center">$6</td>
                         </tr>
                         <tr>
-                            <td width="10%" class="text-center">Phase 2</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 2</td>
+                            <td width="15%" class="text-center">$<span id="phase_2"></span></td>
                             <td width="25%" class="text-center">$12</td>
                         </tr>
                         <tr>
-                            <td width="10%" class="text-center">Phase 3</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 3</td>
+                            <td width="15%" class="text-center">$<span id="phase_3"></span></td>
                             <td width="25%" class="text-center">$26</td>
                         </tr>
                         <tr>
-                            <td width="10%" class="text-center">Phase 4</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 4</td>
+                            <td width="15%" class="text-center">$<span id="phase_4"></span></td>
                             <td width="25%" class="text-center">$56</td>
                         </tr>
                         <tr>
-                            <td width="10%" class="text-center">Phase 5</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 5</td>
+                            <td width="15%" class="text-center">$<span id="phase_5"></span></td>
                             <td width="25%" class="text-center">$120</td>
                         </tr>
                         <tr>
-                            <td width="10%" class="text-center">Phase 6</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 6</td>
+                            <td width="15%" class="text-center">$<span id="phase_6"></span></td>
                             <td width="25%" class="text-center">$250</td>
                         </tr>
                         <tr>
-                            <td width="10%" class="text-center">Phase 7</td>
-                            <td width="15%" class="text-center">$</td>
+                            <td width="20%" class="text-center">Phase 7</td>
+                            <td width="15%" class="text-center">$<span id="phase_7"></span></td>
                             <td width="25%" class="text-center">$520</td>
                         </tr>
                     </table>
@@ -109,7 +109,14 @@
         $(document).on('submit', 'form#balance', function(e) {
             e.preventDefault()
             var $balance = $("input[name=balance]").val();
-            alert($balance)
+            // alert($balance)
+            $("sapan#phase_1").html($balance*0.006);
+            $("sapan#phase_2").html($balance*0.012);
+            $("sapan#phase_3").html($balance*0.026);
+            $("sapan#phase_4").html($balance*0.056);
+            $("sapan#phase_5").html($balance*0.12);
+            $("sapan#phase_6").html($balance*0.25);
+            $("sapan#phase_7").html($balance*0.53);
         });
     </script>
 </body>
