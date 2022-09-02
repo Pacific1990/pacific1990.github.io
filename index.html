@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">.
-                <h1>Hello, world!</h1>
+                <h1>VC Transaction Plan!</h1>
 
                 <form id="balance" class="row navbar-form navbar-left" role="search">
                     <div class="col-md-10">
@@ -43,20 +43,18 @@
 
                 <div class="panel panel-default">
                     <table class="table" width="100%">
-                        <!-- 
                         <tr>
                             <th colspan="2">USDT Quantité</th>
-                            <th colspan="2">Phase</th>
-                            <th colspan="2">Le montant de ma transaction</th>
-                            <th>Démo d'équipe 1000 USDT</th>
+                            <th width="20%" class="text-center" colspan="2">Phase</th>
+                            <th width="15%" class="text-center" colspan="2">Le montant de ma transaction</th>
+                            <th width="25%" class="text-center">Démo d'équipe 1000 USDT</th>
                         </tr>
                         <tr>
                             <th>Montant de la transaction</th>
                         </tr>
-                         -->
                         <tr>
                             <td rowspan="7">
-
+                                $<span id="balance"></span>
                             </td>
                             <td width="20%" class="text-center">Phase 1</td>
                             <td width="15%" class="text-center">$<span id="phase_1"></span></td>
@@ -110,6 +108,7 @@
             e.preventDefault()
             var $balance = $("input[name=balance]").val();
             // alert($balance)
+            $("span#balance").html(($balance));
             $("span#phase_1").html(($balance * 0.006).toFixed(3));
             $("span#phase_2").html(($balance * 0.012).toFixed(3));
             $("span#phase_3").html(($balance * 0.026).toFixed(3));
