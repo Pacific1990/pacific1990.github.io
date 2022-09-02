@@ -106,7 +106,7 @@
     <script>
         $(document).on('submit', 'form#balance', function(e) {
             e.preventDefault()
-            var $balance = $("form[name=balance]").val();
+            var $balance = $("form#balance input[name=balance]").val();
             alert($balance)
         });
     </script>
