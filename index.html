@@ -43,7 +43,7 @@
 
                 <div class="panel panel-default">
                     <table class="table" width="100%">
-<!-- 
+                        <!-- 
                         <tr>
                             <th colspan="2">USDT Quantité</th>
                             <th colspan="2">Phase</th>
@@ -104,19 +104,19 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
     <script>
         $(document).on('submit', 'form#balance', function(e) {
             e.preventDefault()
             var $balance = $("input[name=balance]").val();
             // alert($balance)
-            $("span#phase_1").html($balance*0.006);
-            $("span#phase_2").html($balance*0.012);
-            $("span#phase_3").html($balance*0.026);
-            $("span#phase_4").html($balance*0.056);
-            $("span#phase_5").html($balance*0.12);
-            $("span#phase_6").html($balance*0.25);
-            $("span#phase_7").html($balance*0.53);
+            $("span#phase_1").html(($balance * 0.006).toFixed(3));
+            $("span#phase_2").html(($balance * 0.012).toFixed(3));
+            $("span#phase_3").html(($balance * 0.026).toFixed(3));
+            $("span#phase_4").html(($balance * 0.056).toFixed(3));
+            $("span#phase_5").html(($balance * 0.12).toFixed(3));
+            $("span#phase_6").html(($balance * 0.25).toFixed(3));
+            $("span#phase_7").html(($balance * 0.53).toFixed(3));
         });
     </script>
 </body>
