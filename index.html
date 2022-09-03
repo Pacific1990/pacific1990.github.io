@@ -137,8 +137,8 @@
 
             var $objective_1 = ($balance * 0.039).toFixed(3);
             var $objective_2 = ($balance * 0.058).toFixed(3);
-            var $total_1 = ($balance + $objective_1).toFixed(3);
-            var $total_2 = ($balance + $objective_2).toFixed(3);
+            var $total_1 = (Number($balance) + Number($objective_1)).toFixed(3);
+            var $total_2 = (Number($balance) + Number($objective_2)).toFixed(3);
             
             $("span#objective_1").html($objective_1);
             $("span#total_1").html($total_1);
