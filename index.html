@@ -89,6 +89,28 @@
                         </tr>
                     </table>
                 </div>
+                <div class="panel panel-default">
+                    <table class="table table-bordered" width="100%">
+                        <tr>
+                            <th>Objectifs</th>
+                            <th width="20%" class="text-center">%</th>
+                            <th width="15%" class="text-center" rowspan="2">Gain</th>
+                            <th width="25%" class="text-center">Total</th>
+                        </tr>
+                        <tr>
+                            <td>Minimum</td>
+                            <td width="20%" class="text-center">3,9</td>
+                            <td width="15%" class="text-center">$<span id="objective_1"></span></td>
+                            <td width="25%" class="text-center">$<span id="total_1"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Maximum</td>
+                            <td width="20%" class="text-center">5,8</td>
+                            <td width="15%" class="text-center">$<span id="objective_2"></span></td>
+                            <td width="25%" class="text-center">$<span id="total_2"></span></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -104,6 +126,7 @@
             var $balance = $("input[name=balance]").val();
             // alert($balance)
             $("span#balance").html(($balance));
+
             $("span#phase_1").html(($balance * 0.006).toFixed(3));
             $("span#phase_2").html(($balance * 0.012).toFixed(3));
             $("span#phase_3").html(($balance * 0.026).toFixed(3));
@@ -111,6 +134,11 @@
             $("span#phase_5").html(($balance * 0.12).toFixed(3));
             $("span#phase_6").html(($balance * 0.25).toFixed(3));
             $("span#phase_7").html(($balance * 0.53).toFixed(3));
+
+            $("span#objective_1").html(($balance * 0.039).toFixed(3));
+            $("span#total_1").html(($balance + ( $balance * 0.039 )).toFixed(3));
+            $("span#objective_2").html(($balance * 0.058).toFixed(3));
+            $("span#total_2").html(($balance + ( $balance * 0.058 )).toFixed(3));
         });
     </script>
 </body>
